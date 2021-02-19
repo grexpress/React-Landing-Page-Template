@@ -74,7 +74,7 @@ export class Contact extends Component {
                       <div className="form-group">
                         <input
                             type="file"
-                            id="files"
+                            id="file"
                             name="Choose File"
                             className="form-control"
                             placeholder="CV"

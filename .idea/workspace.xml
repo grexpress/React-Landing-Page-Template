@@ -4,6 +4,7 @@
     <list default="true" id="be67603b-a936-4c02-8b5e-f139945496ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/contact_me.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/contact_me.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1613723908555</updated>
-      <workItem from="1613723910872" duration="7624000" />
+      <workItem from="1613723910872" duration="8684000" />
     </task>
     <servers />
   </component>

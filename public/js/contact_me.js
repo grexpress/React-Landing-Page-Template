@@ -10,14 +10,28 @@ $(function() {
             // get values from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
+            var phone = $("input#phone").val();
             var position = $("input#position").val();
-            var file = $("input#file").val();
+            var files = $("input#file").val();
+
+            // var formData = new FormData();
+            // formData.append("name", name)
+            // formData.append("email", email)
+            // formData.append("phone", phone)
+            // formData.append("position", position)
+            // formData.append("file", file)
 
             $.ajax({
                 url: "/api/send-email",
                 type: "POST",
-                dataType: "json",
-                data: $form.serialize(),
+                data: {
+                    name,
+                    email,
+                    phone,
+                    position,
+                    files
+                },
+                contentType: "multipart/form-data",
                 cache: false,
                 success: function() {
                     // Success message
