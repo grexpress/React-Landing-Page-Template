@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
 
 export class Contact extends Component {
 
@@ -147,7 +146,7 @@ export class Contact extends Component {
         <div id="footer">
           <div className="container text-center">
             <p>
-              &copy; 2020 Grexpress
+              &copy; Grexpress 2020
             </p>
           </div>
         </div>
