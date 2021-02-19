@@ -1,8 +1,8 @@
-import parser from 'lambda-multipart-parser'
-import nodemailer from 'nodemailer'
+const parser = require('lambda-multipart-parser')
+const nodemailer = require('nodemailer')
 const { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT } = process.env
 
-const handler = async (event, context, callback) => {
+exports.handler = async (event, context, callback) => {
     const transporter = nodemailer.createTransport({
         host: EMAIL_HOST || 'smtp.gmail.com',
         port: EMAIL_PORT || 587,
@@ -24,7 +24,6 @@ const handler = async (event, context, callback) => {
     Email: ${email}\n
     CV: find attachment
   `
-
     transporter.sendMail(
         {
             from: email,
@@ -45,5 +44,3 @@ const handler = async (event, context, callback) => {
         },
     )
 }
-
-export { handler }

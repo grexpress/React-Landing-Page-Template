@@ -3,41 +3,6 @@ import axios from "axios";
 
 export class Contact extends Component {
 
-  data = {}
-
-  setData() {
-
-  }
-
-  resetForm() {
-
-  }
-
-  formSubmit = (e) => {
-    e.preventDefault();
-
-    // setData({
-    //   ...data,
-    //   buttonText: 'Sending...'
-    // })
-
-    const formData = new FormData();
-    for (let name in this.state) {
-      formData.append(name, this.state[name]);
-    }
-
-    axios.post('/api/send-mail', formData)
-        .then(res => {
-          if(res.data.result !=='success') {
-            this.resetForm()
-          } else {
-            this.resetForm();
-          }
-        }).catch( (err) => {
-          //console.log(err.response.status)
-      })
-  }
-
   render() {
     return (
       <div>
