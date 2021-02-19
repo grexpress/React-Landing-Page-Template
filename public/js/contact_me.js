@@ -14,8 +14,9 @@ $(function() {
             var file = $("input#file").val();
 
             $.ajax({
-                url: "/api/send-mail",
+                url: "/api/send-email",
                 type: "POST",
+                dataType: "json",
                 data: $form.serialize(),
                 cache: false,
                 success: function() {
