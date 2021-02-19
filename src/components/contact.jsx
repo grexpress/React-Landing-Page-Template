@@ -1,6 +1,43 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 export class Contact extends Component {
+
+  data = {}
+
+  setData() {
+
+  }
+
+  resetForm() {
+
+  }
+
+  formSubmit = (e) => {
+    e.preventDefault();
+
+    // setData({
+    //   ...data,
+    //   buttonText: 'Sending...'
+    // })
+
+    const formData = new FormData();
+    for (let name in this.state) {
+      formData.append(name, this.state[name]);
+    }
+
+    axios.post('/api/send-mail', formData)
+        .then(res => {
+          if(res.data.result !=='success') {
+            this.resetForm()
+          } else {
+            this.resetForm();
+          }
+        }).catch( (err) => {
+          //console.log(err.response.status)
+      })
+  }
+
   render() {
     return (
       <div>
@@ -42,20 +79,48 @@ export class Contact extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="form-group">
-                    <textarea
-                      name="message"
-                      id="message"
-                      className="form-control"
-                      rows="4"
-                      placeholder="Message"
-                      required
-                    ></textarea>
-                    <p className="help-block text-danger"></p>
+                  <div className="row">
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                            type="text"
+                            id="position"
+                            className="form-control"
+                            placeholder="Position"
+                            required="required"
+                        />
+                        <p className="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                        <input
+                            type="text"
+                            id="phone"
+                            className="form-control"
+                            placeholder="Phone"
+                            required="required"
+                        />
+                        <p className="help-block text-danger"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col-md-12">
+                      <div className="form-group">
+                        <input
+                            type="file"
+                            id="files"
+                            name="Choose File"
+                            className="form-control"
+                            placeholder="CV"
+                        />
+                      </div>
+                    </div>
                   </div>
                   <div id="success"></div>
                   <button type="submit" className="btn btn-custom btn-lg">
-                    Send Message
+                    Apply Now
                   </button>
                 </form>
               </div>
@@ -117,10 +182,7 @@ export class Contact extends Component {
         <div id="footer">
           <div className="container text-center">
             <p>
-              &copy; 2020 Issaaf Kattan React Land Page Template. Design by{" "}
-              <a href="http://www.templatewire.com" rel="nofollow">
-                TemplateWire
-              </a>
+              &copy; 2020 Grexpress
             </p>
           </div>
         </div>
