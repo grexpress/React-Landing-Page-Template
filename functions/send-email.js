@@ -4,18 +4,18 @@ let {EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT} = process.
 
 exports.handler = (event, context, callback) => {
     parser.parse(event).then(data => {
+//         sendEmail(data)
         callback(null,  {
             statusCode: 200,
+            data: { name: data.name, email: data.email, phone: data.phone, position: data.position },
             body: {
                 success: true,
-                data,
                 env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
             },
         });
     }).catch(e => {
         callback(e);
     })
-    // return sendEmail(data)
 }
 
 async function sendEmail({name, email, phone, position, files} = {}, test = false) {
