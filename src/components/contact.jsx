@@ -120,6 +120,13 @@ export class Contact extends Component {
             </div>
           </div>
         </div>
+        <div id="footer">
+          <div className="text-center">
+            <p>
+              Copyright &copy; 2021 Grexpress.net Co.,Ltd
+            </p>
+          </div>
+        </div>
       </div>
     );
   }

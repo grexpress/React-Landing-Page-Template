@@ -18,3 +18,7 @@ code {
 #selectedFileName {
   color: #666 !important;
 }
+
+h1 {
+  font-size: 64px !important;
+}

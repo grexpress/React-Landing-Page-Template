@@ -19,7 +19,7 @@ export class Gallery extends Component {
                       {" "}
                       <a
                           href={d.img}
-                          title={d.alt}
+                          title="Project Title"
                           data-lightbox-gallery="gallery1"
                       >
                         <div className="hover-text">
@@ -28,14 +28,14 @@ export class Gallery extends Component {
                         <img
                             src={d.img}
                             className="img-responsive"
-                            alt={d.alt}
+                            alt="Project Title"
                         />{" "}
                       </a>{" "}
                     </div>
                   </div>
                 </div>
-                ))
-                : "loading"
+              ))
+              : "loading"
             }
             </div>
           </div>

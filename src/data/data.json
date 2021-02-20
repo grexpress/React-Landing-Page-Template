@@ -92,7 +92,7 @@
     ]
   },
   "Team": {
-    "title": "What our clients say",
+    "title": "Our Team",
     "dataList": [
       {
         "img": "img/team/01.jpg",
@@ -158,22 +158,22 @@
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.",
     "dataList": [
         {
-            "img": "img/team/01.jpg",
+            "img": "img/portfolio/01-large.jpg",
             "name": "John Doe",
             "alt": "Director"
         },
         {
-            "img": "img/team/02.jpg",
+            "img": "img/portfolio/01-large.jpg",
             "name": "Mike Doe",
             "alt": "Senior Designer"
         },
         {
-            "img": "img/team/03.jpg",
+            "img": "img/portfolio/01-large.jpg",
             "name": "Jane Doe",
             "alt": "Senior Designer"
         },
         {
-            "img": "img/team/04.jpg",
+            "img": "img/portfolio/01-large.jpg",
             "name": "Karen Doe",
             "alt": "Project Manager"
         }
