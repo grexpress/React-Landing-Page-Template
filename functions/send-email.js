@@ -3,15 +3,18 @@ const nodemailer = require('nodemailer')
 let {EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT} = process.env
 
 exports.handler = (event, context, callback) => {
-    const data = parser.parse(event)
-    callback(null,  {
-        statusCode: 200,
-        body: {
-            success: true,
-            data,
-            env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
-        },
-    });
+    parser.parse(event).then(data => {
+        callback(null,  {
+            statusCode: 200,
+            body: {
+                success: true,
+                data,
+                env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
+            },
+        });
+    }).catch(e => {
+        callback(e);
+    })
     // return sendEmail(data)
 }
 
