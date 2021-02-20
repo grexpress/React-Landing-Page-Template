@@ -7,7 +7,8 @@ export class Contact extends Component {
     if(!value || value.trim() === 0) {
       value = "Click here to upload your CV (.pdf, .docx)"
     }
-    document.getElementById("selectedFileName").innerHTML = value;
+    let labelEl = document.getElementById("selectedFileName")
+    if(labelEl) labelEl.innerHTML = value;
   }
 
   render() {
@@ -81,6 +82,7 @@ export class Contact extends Component {
                           <input type="file" id="file" accept=".pdf,.docx" onChange={this.changeText} required="required"/>
                           <span id="selectedFileName" className="placeholder">Click here to upload your CV (.pdf, .docx)</span>
                         </label>
+                        <p className="help-block text-danger"></p>
                       </div>
                     </div>
                   </div>

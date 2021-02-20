@@ -16,7 +16,6 @@ export class Gallery extends Component {
                 <div key={`${d.name}-${i}`} className="col-sm-6 col-md-4 col-lg-4">
                   <div className="portfolio-item">
                     <div className="hover-bg">
-                      {" "}
                       <a
                           href={d.img}
                           title="Project Title"
