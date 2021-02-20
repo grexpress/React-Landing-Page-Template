@@ -9,7 +9,7 @@ exports.handler = (event, context, callback) => {
         sendEmail(data)
             .then(result => callback(null, result))
             .catch(e => callback(e))
-    ).catch(e => callback(e))
+    }).catch(e => callback(e))
 }
 
 async function sendEmail({name, email, phone, position, files} = {}, test = false) {
