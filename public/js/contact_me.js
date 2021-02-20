@@ -9,16 +9,17 @@ $(function() {
             event.preventDefault(); // prevent default submit behaviour
 
             var formData = new FormData($form[0])
-            fetch('/api/send-email', {
+            fetch('/.netlify/functions/send-email', {
                 method: 'POST',
-                headers: {
-                  'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
-                  'Content-Type': 'multipart/form-data'
-                },
                 body: formData
             })
-            .then(response => response.json())
-            .then(response => {
+                .then(response => {
+                    if(response.status == 200) {
+                        return response.json()
+                    } else {
+                        throw response.json()
+                    }
+                }).then(response => {
                 console.log('Success:', JSON.stringify(response))
                 $('#success').html("<div class='alert alert-success'>");
                 $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -31,16 +32,16 @@ $(function() {
                 //clear all fields
                 $('#contactForm').trigger("reset");
             })
-            .catch(error => {
-                console.error('Error:', error)
-                $('#success').html("<div class='alert alert-danger'>");
-                $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                    .append("</button>");
-                $('#success > .alert-danger').append("<strong>Sorry, it seems that my mail server is not responding. Please try again later!");
-                $('#success > .alert-danger').append('</div>');
-                //clear all fields
-                $('#contactForm').trigger("reset");
-            })
+                .catch(error => {
+                    console.error('Error:', error)
+                    $('#success').html("<div class='alert alert-danger'>");
+                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                        .append("</button>");
+                    $('#success > .alert-danger').append("<strong>Sorry, it seems that my mail server is not responding. Please try again later!");
+                    $('#success > .alert-danger').append('</div>');
+                    //clear all fields
+                    $('#contactForm').trigger("reset");
+                })
 
             // $.ajax({
             //     url: "/api/send-email",
