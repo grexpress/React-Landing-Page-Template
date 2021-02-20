@@ -42,7 +42,8 @@ $(function() {
                     .append('</div>');
 
                 //clear all fields
-                $('#contactForm').trigger("reset");
+                let labelEl = document.getElementById("selectedFileName")
+                if(labelEl) labelEl.innerHTML = "Click here to upload your CV (.pdf, .docx)";
             })
                 .catch(error => {
                     console.error('Error:', error)
@@ -53,6 +54,9 @@ $(function() {
                     $('#success > .alert-danger').append('</div>');
                     //clear all fields
                     $('#contactForm').trigger("reset");
+
+                    let labelEl = document.getElementById("selectedFileName")
+                    if(labelEl) labelEl.innerHTML = "Click here to upload your CV (.pdf, .docx)";
                 })
 
             // $.ajax({
