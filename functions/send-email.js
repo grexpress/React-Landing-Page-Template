@@ -3,9 +3,12 @@ const nodemailer = require('nodemailer')
 let { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT } = process.env
 
 exports.handler = (event, context, callback) => {
-    parser.parse(event).then(data => sendEmail(data)
-         .then(result => callback(null, result))
-         .catch(e => callback(e))
+    parser.parse(event).then(data => {
+        console.log("request body: ", data)
+        console.log("event.body", event.body)
+        sendEmail(data)
+            .then(result => callback(null, result))
+            .catch(e => callback(e))
     ).catch(e => callback(e))
 }
 
