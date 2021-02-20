@@ -33,7 +33,10 @@
       <recent name="D:\Workspace\tmp\React-Landing-Page-Template\.netlify" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.send-email.js">
+    <configuration name="send-email.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="functions/send-email.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
     <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -44,6 +47,15 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Node.js.send-email.js" />
+      <item itemvalue="npm.start" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.send-email.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1613723908555</updated>
       <workItem from="1613723910872" duration="8735000" />
-      <workItem from="1613784996729" duration="1681000" />
+      <workItem from="1613784996729" duration="2381000" />
     </task>
     <servers />
   </component>
