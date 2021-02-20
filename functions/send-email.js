@@ -1,22 +1,12 @@
 const parser = require('lambda-multipart-parser')
 const nodemailer = require('nodemailer')
-let {EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT} = process.env
+let { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT } = process.env
 
 exports.handler = (event, context, callback) => {
-    parser.parse(event).then(data => {
-        console.log(data)
-//         return sendEmail(data)
-        callback(null,  {
-            statusCode: 200,
-            body: JSON.stringify({
-                data,
-                success: true,
-                env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
-            }),
-        });
-    }).catch(e => {
-        callback(e);
-    })
+    parser.parse(event).then(data => sendEmail(data)
+         .then(result => callback(null, result))
+         .catch(e => callback(e))
+    ).catch(e => callback(e))
 }
 
 async function sendEmail({name, email, phone, position, files} = {}, test = false) {
