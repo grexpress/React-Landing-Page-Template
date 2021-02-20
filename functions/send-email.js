@@ -4,7 +4,15 @@ let {EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT} = process.
 
 exports.handler = async (event, context) => {
     const data = await parser.parse(event)
-    return sendEmail(data)
+    return {
+        statusCode: 200,
+        body: {
+            success: true,
+            data,
+            env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
+        },
+    }
+    // return sendEmail(data)
 }
 
 async function sendEmail({name, email, phone, position, files} = {}, test = false) {
