@@ -4,7 +4,7 @@ export class Contact extends Component {
 
   changeText() {
     let value = document.getElementById("file").value;
-    if(!value || value.trim() == 0) {
+    if(!value || value.trim() === 0) {
       value = "Click here to upload your CV (.pdf, .docx)"
     }
     document.getElementById("selectedFileName").innerHTML = value;
