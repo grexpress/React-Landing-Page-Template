@@ -4,7 +4,6 @@ let { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT } = proces
 
 exports.handler = (event, context, callback) => {
     parser.parse(event).then(data => {
-        console.log("request data: ", data)
         sendEmail(data)
             .then(result => callback(null, result))
             .catch(e => callback(e))
@@ -28,16 +27,15 @@ async function sendEmail({name, email, phone, position, files} = {}, test = fals
         },
     })
 
-    const subject = `[${position}] ${name}`
+    const subject = `[CV] ${name} ứng tuyển ${position}`
     const text = `
         Name: ${name}\n
         Applying for position: ${position}\n
         Phone: ${phone}\n
         Email: ${email}\n
-        CV: find attachment
       `
     let info = await transporter.sendMail({
-        from: email,
+        from: "Grexpress",
         to: EMAIL_RECIPIENT,
         subject,
         text,

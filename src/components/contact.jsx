@@ -2,6 +2,14 @@ import React, { Component } from "react";
 
 export class Contact extends Component {
 
+  changeText() {
+    let value = document.getElementById("file").value;
+    if(!value || value.trim() == 0) {
+      value = "Click here to upload your CV (.pdf, .docx)"
+    }
+    document.getElementById("selectedFileName").innerHTML = value;
+  }
+
   render() {
     return (
       <div>
@@ -10,11 +18,8 @@ export class Contact extends Component {
             <div className="col-md-8">
               <div className="row">
                 <div className="section-title">
-                  <h2>Get In Touch</h2>
-                  <p>
-                    Please fill out the form below to send us an email and we
-                    will get back to you as soon as possible.
-                  </p>
+                  <h2>{ this.props.data ? this.props.data.title : '' }</h2>
+                  <p>{ this.props.data ? this.props.data.paragraph : '' }</p>
                 </div>
                 <form name="sentMessage" id="contactForm" noValidate>
                   <div className="row">
@@ -50,7 +55,7 @@ export class Contact extends Component {
                             type="text"
                             id="position"
                             className="form-control"
-                            placeholder="Position"
+                            placeholder="Applying for job"
                             required="required"
                         />
                         <p className="help-block text-danger"></p>
@@ -72,31 +77,28 @@ export class Contact extends Component {
                   <div className="row">
                     <div className="col-md-12">
                       <div className="form-group">
-                        <input
-                            type="file"
-                            id="file"
-                            name="Choose File"
-                            className="form-control"
-                            placeholder="CV"
-                        />
+                        <label className="form-control">
+                          <input type="file" id="file" accept = ".pdf,.docx" onChange={this.changeText}/>
+                          <span id="selectedFileName" className="placeholder">Click here to upload your CV (.pdf, .docx)</span>
+                        </label>
                       </div>
                     </div>
                   </div>
                   <div id="success"></div>
                   <button type="submit" className="btn btn-custom btn-lg">
-                    Apply Now
+                    Submit Application
                   </button>
                 </form>
               </div>
             </div>
             <div className="col-md-3 col-md-offset-1 contact-info">
               <div className="contact-item">
-                <h3>Contact Info</h3>
+                <h3>Contacts</h3>
                 <p>
                   <span>
                     <i className="fa fa-map-marker"></i> Address
                   </span>
-                  {this.props.data ? this.props.data.address : "loading"}
+                  { this.props.data ? this.props.data.info.address : "loading"}
                 </p>
               </div>
               <div className="contact-item">
@@ -104,7 +106,7 @@ export class Contact extends Component {
                   <span>
                     <i className="fa fa-phone"></i> Phone
                   </span>{" "}
-                  {this.props.data ? this.props.data.phone : "loading"}
+                  { this.props.data ? this.props.data.info.phone : "loading"}
                 </p>
               </div>
               <div className="contact-item">
@@ -112,7 +114,7 @@ export class Contact extends Component {
                   <span>
                     <i className="fa fa-envelope-o"></i> Email
                   </span>{" "}
-                  {this.props.data ? this.props.data.email : "loading"}
+                  { this.props.data ? this.props.data.info.email : "loading"}
                 </p>
               </div>
             </div>

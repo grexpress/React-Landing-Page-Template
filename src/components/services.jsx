@@ -6,15 +6,12 @@ export class Services extends Component {
       <div id="services" className="text-center">
         <div className="container">
           <div className="section-title">
-            <h2>Our Services</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-              dapibus leonec.
-            </p>
+            <h2>{ this.props.data ? this.props.data.title : '' }</h2>
+            <p>{ this.props.data ? this.props.data.paragraph : '' }</p>
           </div>
           <div className="row">
-            {this.props.data
-              ? this.props.data.map((d, i) => (
+            { this.props.data
+              ? this.props.data.dataList.map((d, i) => (
                   <div  key={`${d.name}-${i}`} className="col-md-4">
                     {" "}
                     <i className={d.icon}></i>

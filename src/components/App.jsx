@@ -6,7 +6,7 @@ import About from './about';
 import Services from './services';
 import Gallery from './gallery';
 import Testimonials from './testimonials';
-import Team from './Team';
+import Team from './team';
 import Contact from './contact';
 import $ from 'jquery';
 
@@ -41,7 +41,7 @@ export class App extends Component {
         <Features data={this.state.resumeData.Features}/>
         <About  data={this.state.resumeData.About}/>
         <Services  data={this.state.resumeData.Services}/>
-        <Gallery />
+        <Gallery data={this.state.resumeData.Gallery}/>
         <Testimonials  data={this.state.resumeData.Testimonials}/>
         <Team  data={this.state.resumeData.Team}/>
         <Contact  data={this.state.resumeData.Contact}/>
