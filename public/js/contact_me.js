@@ -11,6 +11,10 @@ $(function() {
             var formData = new FormData($form[0])
             fetch('/api/send-email', {
                 method: 'POST',
+                headers: {
+                  'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
+                  'Content-Type': 'multipart/form-data'
+                },
                 body: formData
             })
             .then(response => response.json())
