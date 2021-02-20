@@ -7,28 +7,15 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
-            var name = $("input#name").val();
-            var email = $("input#email").val();
-            var phone = $("input#phone").val();
-            var position = $("input#position").val();
-            var fileField = document.querySelector("input[type='file']");
 
-            var formData = new FormData();
-            formData.append("name", name)
-            formData.append("email", email)
-            formData.append("phone", phone)
-            formData.append("position", position)
-            formData.append("files", fileField.files)
-
-            fetch('https://grexpress.netlify.app/.netlify/functions/send-email', {
+            var formData = new FormData($form[0])
+            fetch('/api/send-email', {
                 method: 'POST',
                 body: formData
             })
             .then(response => response.json())
             .then(response => {
                 console.log('Success:', JSON.stringify(response))
-
                 $('#success').html("<div class='alert alert-success'>");
                 $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                     .append("</button>");
