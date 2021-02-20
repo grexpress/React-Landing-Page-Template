@@ -8,10 +8,11 @@ exports.handler = (event, context, callback) => {
         callback(null,  {
             statusCode: 200,
             data: JSON.stringify({ name: data.name, email: data.email, phone: data.phone, position: data.position }),
-            body: {
+            body: JSON.stringify({
+                data: { name: data.name, email: data.email, phone: data.phone, position: data.position },
                 success: true,
                 env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
-            },
+            }),
         });
     }).catch(e => {
         callback(e);
