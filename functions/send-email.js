@@ -4,15 +4,15 @@ let {EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT} = process.
 
 exports.handler = (event, context, callback) => {
     parser.parse(event).then(data => {
-        return sendEmail(data)
-//         callback(null,  {
-//             statusCode: 200,
-//             data: JSON.string{ name: data.name, email: data.email, phone: data.phone, position: data.position },
-//             body: {
-//                 success: true,
-//                 env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
-//             },
-//         });
+//         return sendEmail(data)
+        callback(null,  {
+            statusCode: 200,
+            data: JSON.stringify({ name: data.name, email: data.email, phone: data.phone, position: data.position }),
+            body: {
+                success: true,
+                env: { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT }
+            },
+        });
     }).catch(e => {
         callback(e);
     })
