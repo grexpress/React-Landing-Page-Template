@@ -7,8 +7,17 @@ $(function() {
         },
         submitSuccess: function($form, event) {
             event.preventDefault(); // prevent default submit behaviour
+            var name = $("input#name").val();
+            var email = $("input#email").val();
+            var phone = $("input#phone").val();
+            var position = $("input#position").val();
 
             var formData = new FormData($form[0])
+            formData.append("name", name)
+            formData.append("email", email)
+            formData.append("phone", phone)
+            formData.append("position", position)
+
             fetch('/.netlify/functions/send-email', {
                 method: 'POST',
                 body: formData
