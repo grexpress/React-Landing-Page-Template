@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 export class Contact extends Component {
 
-  changeText() {
-    let value = document.getElementById("file").value;
+  changeText(event) {
+    let value = event.target.files && event.target.files[0] && event.target.files[0].name
     if(!value || value.trim() === 0) {
       value = "Click here to upload your CV (.pdf, .docx)"
     }
@@ -78,7 +78,7 @@ export class Contact extends Component {
                     <div className="col-md-12">
                       <div className="form-group">
                         <label className="form-control">
-                          <input type="file" id="file" accept = ".pdf,.docx" onChange={this.changeText}/>
+                          <input type="file" id="file" accept=".pdf,.docx" onChange={this.changeText} required="required"/>
                           <span id="selectedFileName" className="placeholder">Click here to upload your CV (.pdf, .docx)</span>
                         </label>
                       </div>
