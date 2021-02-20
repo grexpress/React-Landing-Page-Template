@@ -31,6 +31,9 @@ exports.handler = async (event, context) => {
         text,
         attachments: files,
     })
+
+    console.log("")
+
     if (info) {
         return {
             statusCode: 200,
