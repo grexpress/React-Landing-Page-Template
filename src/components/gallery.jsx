@@ -26,7 +26,7 @@ export class Gallery extends Component {
                         </div>
                         <img
                             src={d.img}
-                            className="img-responsive"
+                            className="img-responsive h-responsive"
                             alt="Project Title"
                         />{" "}
                       </a>{" "}

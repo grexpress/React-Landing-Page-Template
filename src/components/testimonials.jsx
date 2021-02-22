@@ -9,21 +9,20 @@ export class testimonials extends Component {
             <h2>{ this.props.data ? this.props.data.title : '' }</h2>
             <p>{ this.props.data ? this.props.data.paragraph : '' }</p>
           </div>
-          <div className="row">
+          <div className="row col-md-12">
             { this.props.data
               ? this.props.data.dataList.map((d, i) => (
-                  <div key={`${d.name}-${i}`} className="col-md-4">
-                    <div className="testimonial">
-                      <div className="testimonial-image">
-                        {" "}
-                        <img src={d.img} alt="" />{" "}
-                      </div>
-                      <div className="testimonial-content">
-                        <p>"{d.text}"</p>
-                        <div className="testimonial-meta"> - {d.name} </div>
-                      </div>
+                <div key={`${d.name}-${i}`} className="col-md-4">
+                  <div className="testimonial">
+                    <div className="testimonial-image">
+                      <img src={d.img} alt="" />
+                    </div>
+                    <div className="testimonial-content">
+                      <p className="text-concat">{d.text}</p>
+                      <div className="testimonial-meta"> - {d.name} </div>
                     </div>
                   </div>
+                </div>
                 ))
               : "loading"}
           </div>

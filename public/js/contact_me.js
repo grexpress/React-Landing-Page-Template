@@ -43,7 +43,7 @@ $(function() {
 
                 //clear all fields
                 let labelEl = document.getElementById("selectedFileName")
-                if(labelEl) labelEl.innerHTML = "Click here to upload your CV (.pdf, .docx)";
+                if(labelEl) labelEl.innerHTML = "Tải lên CV của bạn (.pdf, .docx)";
             })
                 .catch(error => {
                     console.error('Error:', error)
@@ -56,7 +56,7 @@ $(function() {
                     $('#contactForm').trigger("reset");
 
                     let labelEl = document.getElementById("selectedFileName")
-                    if(labelEl) labelEl.innerHTML = "Click here to upload your CV (.pdf, .docx)";
+                    if(labelEl) labelEl.innerHTML = "Tải lên CV của bạn (.pdf, .docx)";
                 })
 
             // $.ajax({

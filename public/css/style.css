@@ -223,11 +223,11 @@ header .intro-text {
 	text-align: center;
 }
 /* Features Section */
-#features {
+#careers {
 	padding: 100px 0;
-	background: #f6f6f6;
+	background: transparent;
 }
-#features i.fa {
+#careers i.fa {
 	font-size: 38px;
 	margin-bottom: 20px;
 	transition: all 0.5s;
@@ -414,20 +414,20 @@ header .intro-text {
 	color: #666;
 }
 /* Team Section */
-#team {
+#careers {
 	padding: 100px 0;
 }
-#team h4 {
+#careers h4 {
 	margin: 5px 0;
 }
-#team .team-img {
+#careers .careers-img {
 	width: 240px;
 }
-#team .thumbnail {
+#careers .thumbnail {
 	background: transparent;
 	border: 0;
 }
-#team .thumbnail .caption {
+#careers .thumbnail .caption {
 	padding: 10px 0 0 0;
 	color: #888;
 }

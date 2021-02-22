@@ -5,7 +5,7 @@ export class Contact extends Component {
   changeText(event) {
     let value = event.target.files && event.target.files[0] && event.target.files[0].name
     if(!value || value.trim() === 0) {
-      value = "Click here to upload your CV (.pdf, .docx)"
+      value = "Tải lên CV của bạn (.pdf, .docx)"
     }
     let labelEl = document.getElementById("selectedFileName")
     if(labelEl) labelEl.innerHTML = value;
@@ -30,7 +30,7 @@ export class Contact extends Component {
                           type="text"
                           id="name"
                           className="form-control"
-                          placeholder="Name"
+                          placeholder="Họ tên"
                           required="required"
                         />
                         <p className="help-block text-danger"></p>
@@ -56,7 +56,7 @@ export class Contact extends Component {
                             type="text"
                             id="position"
                             className="form-control"
-                            placeholder="Applying for job"
+                            placeholder="Vị trí ứng tuyển"
                             required="required"
                         />
                         <p className="help-block text-danger"></p>
@@ -68,7 +68,7 @@ export class Contact extends Component {
                             type="text"
                             id="phone"
                             className="form-control"
-                            placeholder="Phone"
+                            placeholder="Điện thoại"
                             required="required"
                         />
                         <p className="help-block text-danger"></p>
@@ -80,7 +80,7 @@ export class Contact extends Component {
                       <div className="form-group">
                         <label className="form-control">
                           <input type="file" id="file" accept=".pdf,.docx" onChange={this.changeText} required="required"/>
-                          <span id="selectedFileName" className="placeholder">Click here to upload your CV (.pdf, .docx)</span>
+                          <span id="selectedFileName" className="placeholder">Tải lên CV của bạn (.pdf, .docx)</span>
                         </label>
                         <p className="help-block text-danger"></p>
                       </div>
@@ -88,29 +88,29 @@ export class Contact extends Component {
                   </div>
                   <div id="success"></div>
                   <button type="submit" className="btn btn-custom btn-lg">
-                    Submit Application
+                    Ứng tuyển
                   </button>
                 </form>
               </div>
             </div>
             <div className="col-md-3 col-md-offset-1 contact-info">
               <div className="contact-item">
-                <h3>Contacts</h3>
+                <h3>Liên hệ</h3>
                 <p>
                   <span>
-                    <i className="fa fa-map-marker"></i> Address
+                    <i className="fa fa-map-marker"></i> Địa chỉ
                   </span>
                   { this.props.data ? this.props.data.info.address : "loading"}
                 </p>
               </div>
-              <div className="contact-item">
-                <p>
-                  <span>
-                    <i className="fa fa-phone"></i> Phone
-                  </span>{" "}
-                  { this.props.data ? this.props.data.info.phone : "loading"}
-                </p>
-              </div>
+              {/*<div className="contact-item">*/}
+              {/*  <p>*/}
+              {/*    <span>*/}
+              {/*      <i className="fa fa-phone"></i> Phone*/}
+              {/*    </span>{" "}*/}
+              {/*    { this.props.data ? this.props.data.info.phone : "loading"}*/}
+              {/*  </p>*/}
+              {/*</div>*/}
               <div className="contact-item">
                 <p>
                   <span>

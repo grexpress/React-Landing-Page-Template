@@ -9,7 +9,7 @@ export class Services extends Component {
             <h2>{ this.props.data ? this.props.data.title : '' }</h2>
             <p>{ this.props.data ? this.props.data.paragraph : '' }</p>
           </div>
-          <div className="row">
+          <div className="row center-block">
             { this.props.data
               ? this.props.data.dataList.map((d, i) => (
                   <div  key={`${d.name}-${i}`} className="col-md-4">
