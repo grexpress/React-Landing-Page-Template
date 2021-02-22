@@ -1,23 +1,23 @@
 {
   "Header": {
-    "title": "We are a ecommerce company",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Sứ mệnh của chúng tôi",
+    "paragraph": "GrExpress định hướng phát triển thành một doanh nghiệp dịch vụ và thương mại điện tử xuyên biên giới, không ngừng đổi mới, sáng tạo để kiến tạo ra hệ sinh thái sản phẩm dịch vụ đẳng cấp. Để chứng minh cho thế giới thấy rằng thương hiệu của Việt Nam cũng có thể sánh ngang với các thương hiệu trên thế giới"
   },
   "About": {
-    "title": "About us",
-    "subtitle": "Why Choose Us?",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "title": "Giới thiệu công ty",
+    "subtitle": "Tại sao lại chọn chúng tôi?",
+    "paragraph": "Được thành lập từ năm 2019, chúng tôi là một những công ty của Việt Nam  thành công trong lĩnh vực Print On Demand. Sau hai năm hình thành và phát triển, chúng tôi luôn đặt tính sáng tạo và chất lượng sản phẩm lên hàng đầu. Chúng tôi đã từng bước trở thành những người bán hàng đầu trên các nền tảng bán hàng như Teezily, Sunfrog... Đã đem đến hàng chục nghìn sản phẩm chất lượng cho các khách hàng ở thị trường Mỹ và Châu Âu.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Thiết kế sáng tạo",
+      "Sản phẩm độc đáo, tuyệt vời",
+      "Tư vấn tận tình, chu đáo",
+      "Chăm sóc khách hàng tuyệt vời"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Cửa hàng trực tuyến",
+      "Khách hàng",
+      "Sản phẩm",
+      "Khách hàng hài lòng"
     ]
   },
   "Services": {
@@ -113,7 +113,7 @@
         "img": "",
         "name": "Mobile Engineer (Kotlin/ Java)",
         "job": "Software Developer"
-      },
+      }
     ]
   },
   "Contact": {
@@ -157,26 +157,26 @@
     "title": "Gallery",
     "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.",
     "dataList": [
-        {
-            "img": "img/portfolio/01-large.jpg",
-            "name": "John Doe",
-            "alt": "Director"
-        },
-        {
-            "img": "img/portfolio/01-large.jpg",
-            "name": "Mike Doe",
-            "alt": "Senior Designer"
-        },
-        {
-            "img": "img/portfolio/01-large.jpg",
-            "name": "Jane Doe",
-            "alt": "Senior Designer"
-        },
-        {
-            "img": "img/portfolio/01-large.jpg",
-            "name": "Karen Doe",
-            "alt": "Project Manager"
-        }
+      {
+        "img": "img/portfolio/01-large.jpg",
+        "name": "John Doe",
+        "alt": "Director"
+      },
+      {
+        "img": "img/portfolio/01-large.jpg",
+        "name": "Mike Doe",
+        "alt": "Senior Designer"
+      },
+      {
+        "img": "img/portfolio/01-large.jpg",
+        "name": "Jane Doe",
+        "alt": "Senior Designer"
+      },
+      {
+        "img": "img/portfolio/01-large.jpg",
+        "name": "Karen Doe",
+        "alt": "Project Manager"
+      }
     ]
-}
+  }
 }
