@@ -49,7 +49,7 @@ $(function() {
                     $('#success > .alert-success')
                         .append('</div>');
 
-                    //clear all fields
+                    $('#contactForm').trigger("reset");
                     let labelEl = document.getElementById("selectedFileName")
                     if(labelEl) labelEl.innerHTML = "Tải lên CV của bạn (.pdf, .docx)";
                 }).catch(error => {
@@ -65,10 +65,7 @@ $(function() {
             } catch (e) {
                 throw e
             }
-        },
-        filter: function() {
-            return $(this).is(":visible");
-        },
+        }
     });
 
     $("a[data-toggle=\"tab\"]").click(function(e) {

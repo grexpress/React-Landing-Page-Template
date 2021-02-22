@@ -2,13 +2,25 @@ import React, { Component } from "react";
 
 export class Contact extends Component {
 
+  constructor(...props) {
+    super(props);
+  }
+
   changeText(event) {
-    let value = event.target.files && event.target.files[0] && event.target.files[0].name
-    if(!value || value.trim() === 0) {
-      value = "Tải lên CV của bạn (.pdf, .docx)"
+    let fileName = null
+    let file = event.target.files && event.target.files[0]
+    if(file) {
+      if(file.size > 1024 * 1024 * 2){
+        event.target.value = "";
+        alert("Upload file size is limited to 2Mb");
+      } else {
+        if(file.name.trim().length > 0) {
+          fileName = file.name
+        }
+      }
     }
     let labelEl = document.getElementById("selectedFileName")
-    if(labelEl) labelEl.innerHTML = value;
+    if(labelEl) labelEl.innerHTML = fileName || "Tải lên CV của bạn (.pdf, .docx)";
   }
 
   render() {
