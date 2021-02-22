@@ -14,7 +14,7 @@ export class Careers extends Component {
                                 <div key={`${d.title}-${i}`} className="col-xs-6 col-md-4">
                                     {" "}
                                     <i className={d.icon}></i>
-                                    <a href={d.url} target="_blank">
+                                    <a href={d.url} target="noreferrer">
                                         <h3>{d.name}</h3>
                                         <p>{d.text}</p>
                                     </a>
