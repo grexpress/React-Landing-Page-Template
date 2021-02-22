@@ -5,7 +5,7 @@ export class features extends Component {
     return (
       <div id="features" className="text-center">
         <div className="container">
-          <div className="col-md-10 col-md-offset-1 section-title">
+          <div className="col-md-8 col-md-offset-2 section-title">
             <h2>{ this.props.data ? this.props.data.title : '' }</h2>
           </div>
           <div className="row">

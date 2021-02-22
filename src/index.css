@@ -27,7 +27,7 @@ h1 {
   justify-content: center;
 }
 
-.center-block {
+.center-flex {
   display: flex;
   justify-content: center;
 }

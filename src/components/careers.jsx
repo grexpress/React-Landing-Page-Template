@@ -5,13 +5,13 @@ export class Careers extends Component {
         return (
             <div id="careers" className="text-center">
                 <div className="container">
-                    <div className="col-md-10 col-md-offset-1 section-title">
+                    <div className="col-md-8 col-md-offset-2 section-title">
                         <h2>{this.props.data ? this.props.data.title : ''}</h2>
                     </div>
-                    <div className="row center">
+                    <div className="row center-block">
                         {this.props.data
                             ? this.props.data.dataList.map((d, i) => (
-                                <div key={`${d.title}-${i}`} className="col-xs-6 col-md-4">
+                                <div key={`${d.title}-${i}`} className="col-md-4">
                                     {" "}
                                     <i className={d.icon}></i>
                                     <a href={d.url} target="noreferrer">
