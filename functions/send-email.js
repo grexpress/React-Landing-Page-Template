@@ -4,7 +4,6 @@ let { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_RECIPIENT } = proces
 
 exports.handler = (event, context, callback) => {
     parser.parse(event).then(data => {
-        console.log("Request data: ", data)
         sendEmail(data)
             .then(result => callback(null, result))
             .catch(e => callback(e))

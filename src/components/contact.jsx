@@ -87,7 +87,7 @@ export class Contact extends Component {
                     </div>
                   </div>
                   <div id="success"></div>
-                  <button type="submit" className="btn btn-custom btn-lg">
+                  <button type="submit" id="submit" className="btn btn-custom btn-lg">
                     Ứng tuyển
                   </button>
                 </form>
