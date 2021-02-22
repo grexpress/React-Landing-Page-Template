@@ -92,37 +92,37 @@
     ]
   },
   "Team": {
-    "title": "Our Team",
+    "title": "Feature jobs",
     "dataList": [
       {
-        "img": "img/team/01.jpg",
-        "name": "John Doe",
-        "job": "Director"
+        "img": "",
+        "name": "Mobile Engineer (Kotlin/ Java)",
+        "job": "Software Developer"
       },
       {
-        "img": "img/team/02.jpg",
-        "name": "Mike Doe",
-        "job": "Senior Designer"
+        "img": "",
+        "name": "Mobile Engineer (Kotlin/ Java)",
+        "job": "Software Developer"
       },
       {
-        "img": "img/team/03.jpg",
-        "name": "Jane Doe",
-        "job": "Senior Designer"
+        "img": "",
+        "name": "Mobile Engineer (Kotlin/ Java)",
+        "job": "Software Developer"
       },
       {
-        "img": "img/team/04.jpg",
-        "name": "Karen Doe",
-        "job": "Project Manager"
-      }
+        "img": "",
+        "name": "Mobile Engineer (Kotlin/ Java)",
+        "job": "Software Developer"
+      },
     ]
   },
   "Contact": {
     "title": "Apply for jobs now",
     "paragraph": "Please fill out the form below to send us an email and we will get back to you as soon as possible.",
     "info": {
-      "address": "4321 California St, San Francisco, CA 12345 ",
-      "phone": "+1 123 456 1234",
-      "email": "info@company.com",
+      "address": "Tòa nhà Ellipse, 110-112 Trần Phú, Mộ Lao, Hà Đông, Hà Nội, Việt Nam",
+      "phone": "+8400000000000",
+      "email": "hcns.grexpress@gmail.com",
       "facebook": "fb.com",
       "twitter": "twitter.com",
       "youtube": "youtube.com"
