@@ -106,7 +106,7 @@
       "address": "Tòa nhà Ellipse, 110-112 Trần Phú, Mộ Lao, Hà Đông, Hà Nội, Việt Nam",
       "phone": "+8400000000000",
       "email": "hcns.grexpress@gmail.com",
-      "facebook": "fb.com",
+      "facebook": "fb.com/Expressnet-588691301542738/",
       "twitter": "twitter.com",
       "youtube": "youtube.com"
     }
@@ -116,33 +116,33 @@
     "dataList": [
       {
         "img": "img/gallery/anh-0.jpg",
-        "name": "Gallery",
-        "alt": "Gallery"
+        "name": "GrExpress",
+        "alt": "GrExpress"
       },
       {
         "img": "img/gallery/anh-1.jpg",
-        "name": "Gallery",
-        "alt": "Gallery"
+        "name": "Trung thu",
+        "alt": "Trung thu"
       },
       {
         "img": "img/gallery/anh-2.jpg",
-        "name": "Gallery",
-        "alt": "Gallery"
+        "name": "Du xuân 2021 - Ninh Bình",
+        "alt": "Du xuân 2021 - Ninh Bình"
       },
       {
         "img": "img/gallery/anh-3.jpg",
-        "name": "Gallery",
-        "alt": "Gallery"
+        "name": "Du lịch hè 2020",
+        "alt": "Du lịch hè 2020"
       },
       {
         "img": "img/gallery/anh-4.jpg",
-        "name": "Gallery",
-        "alt": "Gallery"
+        "name": "Team-building",
+        "alt": "Team-building"
       },
       {
         "img": "img/gallery/anh-6.jpg",
-        "name": "Gallery 6",
-        "alt": "Gallery 6"
+        "name": "Hoạt động thể thao",
+        "alt": "Hoạt động thể thao"
       }
     ]
   }
