@@ -88,13 +88,7 @@
         "icon": "fa fa-paint-brush",
         "name": "Thiết kế đồ họa",
         "text": "(Designer)",
-        "url": ""
-      },
-      {
-        "icon": "fa fa-share-alt",
-        "name": "Nhân viên Marketing",
-        "text": "(Marketing)",
-        "url": ""
+        "url": "https://docs.google.com/document/d/1PlicEqOHC928eI8lJZBU2YvezXLmmAxjf_aMqd5Zot8/edit"
       }
     ]
   },
@@ -106,7 +100,7 @@
       "address": "Tòa nhà Ellipse, 110-112 Trần Phú, Mộ Lao, Hà Đông, Hà Nội, Việt Nam",
       "phone": "+8400000000000",
       "email": "hcns.grexpress@gmail.com",
-      "facebook": "fb.com/Expressnet-588691301542738/",
+      "facebook": "fb.com/Expressnet-588691301542738",
       "twitter": "twitter.com",
       "youtube": "youtube.com"
     }
